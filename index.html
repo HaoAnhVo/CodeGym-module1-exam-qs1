@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cau1</title>
+    </head>
+    <body>
+        <script>
+            let inputLength = +prompt("Nhap so phan tu cua mang (toi da 20 ki tu)");
+            const arrNumber = [];
+            if (inputLength <= 20) {
+                let sumEven = 0;
+                let sumOdd = 0;
+                for (let i = 0; i < inputLength; i++) {
+                    arrNumber[i] = +prompt("Nhap phan tu thu " + i);
+                    if (!isNaN(arrNumber[i])) {
+                        if (arrNumber[i] % 2 === 0) {
+                            sumEven += arrNumber[i];
+                        }
+                    } else {
+                        alert("Vui long nhap vao so");
+                        break;
+                    }
+                }
+                console.log("Mang vua nhap vao la: " + arrNumber);
+                for (let j = 0; j < inputLength; j++) {
+                    if (arrNumber[j] % 2 !== 0) {
+                        sumOdd += arrNumber[j];
+                    }
+                }
+                let result = sumEven - sumOdd;
+                console.log("Ket qua phep tinh la " + result);
+            } else {
+                alert("Vui long nhap toi da 20 ki tu!");
+            }
+        </script>
+    </body>
+</html>
